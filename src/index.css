@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-space-black: #05010D;
+  --color-nebula-midnight: #0B1020;
+  --color-cosmic-navy: #12182B;
+  --color-neon-violet: #7C5CFF;
+  --color-cosmic-indigo: #5B8CFF;
+  --color-electric-magenta: #D946EF;
+  --color-star-white: #F5F7FF;
+  --color-cosmic-silver: #AAB0FF;
+  --color-nebula-cyan: #22D3EE;
+
+  --image-hero-gradient: linear-gradient(135deg, #7C5CFF 0%, #5B8CFF 50%, #22D3EE 100%);
+  --image-nebula-glow: radial-gradient(circle at top, rgba(217, 70, 239, 0.2), #05010D 70%);
+  --image-button-hover: linear-gradient(90deg, #7C5CFF, #D946EF);
+
+  --animate-spin-slow: spin 20s linear infinite;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+
+@layer base {
+  html {
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#F6F8FF] text-[#0B1020] dark:bg-space-black dark:text-star-white overflow-x-hidden antialiased selection:bg-neon-violet selection:text-white transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05010D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12182B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C5CFF;
+}
+
+.glass-card {
+  @apply bg-white/10 dark:bg-black/10 backdrop-blur-lg border border-white/10 shadow-lg;
+}
