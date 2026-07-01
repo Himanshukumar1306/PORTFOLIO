@@ -2,7 +2,7 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import heroProfile from '../assets/hero-profile.png';
+import heroProfile from '../assets/hero-profile.jpg';
 
 const Hero = () => {
     return (
